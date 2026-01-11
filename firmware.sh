@@ -1759,11 +1759,6 @@ function stock_menu() {
 	1)	if [[ "$unlockMenu" = true || ( "$isFullRom" = false && "$isStock" = true && "$isUnsupported" = false \
 				&& ("$isCmlBook" = false || "$device" == "drallion") && "$isEOL" = false ) ]]; then
 			flash_rwlegacy
-		elif [[ "$isEOL" = "true" ]]; then
-			echo_red "The RW_LEGACY firmware update is not supported for devices which have reached end-of-life"
-			read -rep "Press enter to return to the main menu"
-		fi
-		menu_fwupdate
 		;;
 
 	2)	if [[ "$unlockMenu" = true || "$hasUEFIoption" = true ]]; then
