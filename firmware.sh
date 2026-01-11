@@ -1667,8 +1667,6 @@ function reset_cr50_nvram() {
 function menu_fwupdate() {
 	if [[ "$isFullRom" = true ]]; then
 		uefi_menu
-	else
-		stock_menu
 	fi
 }
 
