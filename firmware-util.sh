@@ -62,14 +62,6 @@ if [[ ! -d "$script_dir/.git"  || "$use_local" =~ ^[Nn]$ || -z "$use_local" ]]; 
 
 	#get support scripts
 	echo -e "\nDownloading supporting files..."
-
-	for file in "${required_files[@]}"; do
-		rm -rf "${file}" >/dev/null 2>&1
-		if ! $CURL -sLO "${script_url}${file}"; then
-			echo -e "\nError downloading $file; cannot continue"
-			exit 1
-		fi
-	done
 fi
 
 source "$script_dir/device-db.sh"
