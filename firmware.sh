@@ -1757,6 +1757,8 @@ function stock_menu() {
 	1)	if [[ "$unlockMenu" = true || ( "$isFullRom" = false && "$isStock" = true && "$isUnsupported" = false \
 				&& ("$isCmlBook" = false || "$device" == "drallion") && "$isEOL" = false ) ]]; then
 			flash_rwlegacy
+		fi
+			menu_fwupdate
 		;;
 
 	2)	if [[ "$unlockMenu" = true || "$hasUEFIoption" = true ]]; then
